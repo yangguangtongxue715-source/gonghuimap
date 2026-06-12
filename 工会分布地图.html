@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a19b7ff5ec18b7686f46c273236c2d09 {
+                #map_6dea1b22504b097074fe4b0dd3bf70fe {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -52,6 +52,9 @@
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>
     
@@ -131,14 +134,14 @@ function jump(lat,lng,name){
 }
 </script>
     
-            <div class="folium-map" id="map_a19b7ff5ec18b7686f46c273236c2d09" ></div>
+            <div class="folium-map" id="map_6dea1b22504b097074fe4b0dd3bf70fe" ></div>
         
 </body>
 <script>
     
     
-            var map_a19b7ff5ec18b7686f46c273236c2d09 = L.map(
-                "map_a19b7ff5ec18b7686f46c273236c2d09",
+            var map_6dea1b22504b097074fe4b0dd3bf70fe = L.map(
+                "map_6dea1b22504b097074fe4b0dd3bf70fe",
                 {
                     center: [30.274, 120.155],
                     crs: L.CRS.EPSG3857,
@@ -155,7 +158,7 @@ function jump(lat,lng,name){
 
         
     
-            var tile_layer_c37185f1bdad2976bc5591b6e6200ec6 = L.tileLayer(
+            var tile_layer_ae2b0e9e4eccecff5cfe4cf4b1dab04f = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -172,10 +175,10 @@ function jump(lat,lng,name){
             );
         
     
-            tile_layer_c37185f1bdad2976bc5591b6e6200ec6.addTo(map_a19b7ff5ec18b7686f46c273236c2d09);
+            tile_layer_ae2b0e9e4eccecff5cfe4cf4b1dab04f.addTo(map_6dea1b22504b097074fe4b0dd3bf70fe);
         
     
-            var tile_layer_e330846c39368d6e9c8994239f3e4177 = L.tileLayer(
+            var tile_layer_993180a3e7dd2f9cac67d12b1a72fa4e = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -192,29 +195,36 @@ function jump(lat,lng,name){
             );
         
     
-            var locate_control_fa29b378a408ae069fff5c20abf34360 = L.control.locate(
+            var locate_control_fbbd3814e4af86f0d0f44a922568e966 = L.control.locate(
                 {"position": "topright"}
-            ).addTo(map_a19b7ff5ec18b7686f46c273236c2d09);
+            ).addTo(map_6dea1b22504b097074fe4b0dd3bf70fe);
             
         
     
-            var layer_control_22db81d1eac5682d506d28f03fb15994_layers = {
+            var marker_cluster_62431d4cad59271b6d7f37b83821cd5c = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var layer_control_8efc778fd49e34c7d26e5477469ad060_layers = {
                 base_layers : {
-                    "\u536b\u661f\u56fe" : tile_layer_c37185f1bdad2976bc5591b6e6200ec6,
-                    "\u666e\u901a\u5730\u56fe" : tile_layer_e330846c39368d6e9c8994239f3e4177,
+                    "\u536b\u661f\u56fe" : tile_layer_ae2b0e9e4eccecff5cfe4cf4b1dab04f,
+                    "\u666e\u901a\u5730\u56fe" : tile_layer_993180a3e7dd2f9cac67d12b1a72fa4e,
                 },
                 overlays :  {
+                    "_dummy" : marker_cluster_62431d4cad59271b6d7f37b83821cd5c,
                 },
             };
-            let layer_control_22db81d1eac5682d506d28f03fb15994 = L.control.layers(
-                layer_control_22db81d1eac5682d506d28f03fb15994_layers.base_layers,
-                layer_control_22db81d1eac5682d506d28f03fb15994_layers.overlays,
+            let layer_control_8efc778fd49e34c7d26e5477469ad060 = L.control.layers(
+                layer_control_8efc778fd49e34c7d26e5477469ad060_layers.base_layers,
+                layer_control_8efc778fd49e34c7d26e5477469ad060_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_a19b7ff5ec18b7686f46c273236c2d09);
+            ).addTo(map_6dea1b22504b097074fe4b0dd3bf70fe);
 
         
 </script>
